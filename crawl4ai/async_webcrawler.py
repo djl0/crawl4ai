@@ -456,7 +456,7 @@ class AsyncWebCrawler:
         """
         cleaned_html = ""
         try:
-            _url = url if not kwargs.get("is_raw_html", False) else "Raw HTML"
+            _url = url =  url if not kwargs.get("is_raw_html", False) else "Raw HTML"
             t1 = time.perf_counter()
 
             # Get scraping strategy and ensure it has a logger

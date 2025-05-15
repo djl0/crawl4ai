@@ -468,7 +468,7 @@ class AsyncPlaywrightCrawlerStrategy(AsyncCrawlerStrategy):
 
         elif url.startswith("raw:") or url.startswith("raw://"):
             # Process raw HTML content
-            raw_html = url[4:] if url[:4] == "raw:" else url[7:]
+            raw_html = url[6:] if url[:6] == "raw://" else url[4:]
             html = raw_html
             if config.screenshot:
                 screenshot_data = await self._generate_screenshot_from_html(html)

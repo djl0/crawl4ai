@@ -1645,7 +1645,9 @@ def perform_completion_with_backoff(
     max_attempts = 3
     base_delay = 2  # Base delay in seconds, you can adjust this based on your needs
 
-    extra_args = {"temperature": 0.01, "api_key": api_token, "base_url": base_url}
+    extra_args = {
+        # "temperature": 0.01, 
+                  "api_key": api_token, "base_url": base_url}
     if json_response:
         extra_args["response_format"] = {"type": "json_object"}
 
